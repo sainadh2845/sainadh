@@ -6,14 +6,13 @@ st.set_page_config(layout="wide")
 
 @st.cache_resource
 def text_summary(text, maxlength=None):
-    #create summary instance
     summary = Summary()
     text = (text)
     result = summary(text)
     return result
 
 def extract_text_from_pdf(file_path):
-    # Open the PDF file using PyPDF2
+   
     with open(file_path, "rb") as f:
         reader = PdfReader(f)
         page = reader.pages[0]
