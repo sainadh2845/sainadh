@@ -12,7 +12,7 @@ def get_wikipedia_search_results(search_term):
     response = requests.get(endpoint, params=params)
     return response.json()['query']['search'][:3]
 
-st.title('Wikipedia Search App')
+st.title('Wikipedia Search webApp')
 
 
 search_term = st.text_input('Enter a search element:', '')
